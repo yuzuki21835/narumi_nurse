@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成美のナース日記。｜看護師の新しい働き方を考える</title>
+    <meta name="description" content="現役ママナース成美が、仕事と育児の両立を目指して新しい働き方を模索する個人ブログ。実体験に基づく転職サイト活用術を紹介。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Yomogi&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'natural-bg': '#FAF7F2', 
+                        'natural-accent': '#E8D3C1', 
+                        'warm-pink': '#F9E8E8', 
+                        'leaf-green': '#DDE4D7',
+                        'soft-brown': '#8C7B6C',
+                        'text-main': '#5D544D'
+                    },
+                    fontFamily: {
+                        'hand': ['Yomogi', 'cursive'],
+                        'serif': ['Shippori Mincho', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #5D544D;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .marker-soft {
+            background: linear-gradient(transparent 65%, #F3E5D8 65%);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(93, 84, 77, 0.05);
+        }
+
+        .btn-link {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-link:hover {
+            transform: scale(1.02);
+            opacity: 0.95;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo-display {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fdfdfd;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #8C7B6C;
+            border: 1px solid #f0f0f0;
+            font-family: sans-serif;
+        }
+
+        .profile-border {
+            border: 6px solid #fff;
+            box-shadow: 0 8px 30px rgba(232, 211, 193, 0.5);
+        }
+
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="py-4 md:py-8 px-4 relative">
+
+    <!-- 景表法対策 -->
+    <div class="max-w-2xl mx-auto mb-4 flex justify-between items-center px-2">
+        <span class="text-[10px] text-soft-brown/60 font-bold tracking-widest uppercase">Personal Blog</span>
+        <span class="text-[10px] text-gray-400 bg-white/60 px-2 py-1 rounded-full border border-gray-100">PR：本ページはプロモーションを含みます</span>
+    </div>
+
+    <!-- Header -->
+    <header class="max-w-2xl mx-auto mb-10 text-center reveal">
+        <h1 class="font-hand text-3xl md:text-4xl text-soft-brown mb-1 tracking-tighter">Narumi's Nurse Log.</h1>
+        <p class="text-[9px] tracking-[0.4em] uppercase text-natural-accent font-bold">Nursing & Motherhood lifestyle</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-2xl mx-auto content-card overflow-hidden mb-12 border border-white">
+        
+        <!-- Hero Section -->
+        <div class="relative">
+            <div class="p-3 md:p-6">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=1200" alt="公園で遊ぶ親子の風景" class="w-full h-64 md:h-96 object-cover rounded-[30px] md:rounded-[35px]">
+            </div>
+        </div>
+
+        <!-- Article Content Area (Spacing Adjustment) -->
+        <div class="px-6 md:px-16 pt-8 pb-16">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-center leading-[1.8] mb-12 text-text-main">
+                「おかえり」を笑顔で言いたい。<br>
+                <span class="marker-soft text-xl md:text-2xl">自分に合う働き方</span>を求めて、<br>
+                私が活用している3つのサイト。
+            </h2>
+
+            <div class="space-y-10 text-[15px] md:text-[16px] leading-[2.2] text-text-main/90 font-serif">
+                <p class="reveal">
+                    こんにちは、成美です。今日も一日、本当にお疲れ様です。<br>
+                    子育てと病棟勤務の両立に悩み、一歩踏み出した私が、実際に利用して「本当に助かった」と感じたサービスをご紹介します。
+                </p>
+
+                <!-- Comparison Cards -->
+                <div class="pt-8 space-y-10 font-sans">
+                    
+                    <!-- 1. Leverwell -->
+                    <div class="reveal border border-gray-100 rounded-[35px] p-6 md:p-8 shadow-sm bg-white">
+                        <div class="logo-display">Leverwell Nursing</div>
+                        <h3 class="font-bold text-lg mb-4 text-text-main flex items-center gap-2">
+                            <span class="w-6 h-6 bg-soft-brown text-white text-[10px] flex items-center justify-center rounded-full">1</span>
+                            レバウェル看護
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            求人数が圧倒的で、希望条件に合う職場を幅広く網羅できます。LINEでの連絡もスムーズで、在職中の忙しい時期でも効率よく情報収集ができました。
+                        </p>
+                        <a href="https://kango.levwell.jp/" target="_blank" rel="noopener noreferrer" class="btn-link w-full py-4 rounded-full border-2 border-soft-brown text-soft-brown font-bold text-sm hover:bg-soft-brown hover:text-white">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            無料で求人情報をチェックする
+                        </a>
+                    </div>
+
+                    <!-- 2. Kango-roo -->
+                    <div class="reveal border border-leaf-green/30 rounded-[35px] p-6 md:p-8 shadow-sm bg-leaf-green/5">
+                        <div class="logo-display" style="color:#059669">看護roo!</div>
+                        <h3 class="font-bold text-lg mb-4 text-text-main flex items-center gap-2">
+                            <span class="w-6 h-6 bg-green-600 text-white text-[10px] flex items-center justify-center rounded-full">2</span>
+                            看護roo！
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            職場環境や人間関係など、求人票だけでは見えない「生の情報」に強いです。転職後のミスマッチを避けたい方に、最もおすすめできるサービスです。
+                        </p>
+                        <a href="https://www.kango-roo.com/" target="_blank" rel="noopener noreferrer" class="btn-link w-full py-4 rounded-full border-2 border-green-600 text-green-600 font-bold text-sm hover:bg-green-600 hover:text-white">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            職場のリアルな雰囲気を聞いてみる
+                        </a>
+                    </div>
+
+                    <!-- 3. Repath -->
+                    <div class="reveal border border-warm-pink/30 rounded-[35px] p-6 md:p-8 shadow-sm bg-warm-pink/10">
+                        <div class="logo-display" style="color:#D98C8C">Repath Nurse</div>
+                        <h3 class="font-bold text-lg mb-4 text-text-main flex items-center gap-2">
+                            <span class="w-6 h-6 bg-[#D98C8C] text-white text-[10px] flex items-center justify-center rounded-full">3</span>
+                            リーパスナース
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                            訪問看護に特化した専門エージェント。ママナースに理解のあるステーションを厳選して紹介してくれるため、理想の両立を叶えられました。
+                        </p>
+                        <a href="https://re-path.co.jp/nurse/" target="_blank" rel="noopener noreferrer" class="btn-link w-full py-4 rounded-full bg-[#D98C8C] text-white font-bold text-sm shadow-md shadow-pink-100">
+                            <i data-lucide="heart" class="w-4 h-4"></i>
+                            自分に合う働き方を相談してみる
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 運営者プロフィール -->
+                <div class="reveal mt-16 p-8 rounded-[35px] bg-natural-bg/30 border border-white font-sans shadow-inner">
+                    <h4 class="font-bold text-soft-brown text-center mb-6 flex items-center justify-center gap-2">
+                        <i data-lucide="user-check" class="w-4 h-4"></i>
+                        PROFILE
+                    </h4>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <!-- Profile Image (Bear Icon) -->
+                        <div class="w-24 h-24 rounded-full profile-border overflow-hidden bg-white flex-shrink-0 flex items-center justify-center floating">
+                             <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="35" r="12" fill="#D2B48C"/>
+                                <circle cx="70" cy="35" r="12" fill="#D2B48C"/>
+                                <circle cx="50" cy="55" r="32" fill="#D2B48C"/>
+                                <ellipse cx="50" cy="65" rx="15" ry="12" fill="#F5DEB3"/>
+                                <circle cx="40" cy="55" r="3" fill="#5D544D"/>
+                                <circle cx="60" cy="55" r="3" fill="#5D544D"/>
+                                <circle cx="35" cy="62" r="4" fill="#FAD1D1" fill-opacity="0.6"/>
+                                <circle cx="65" cy="62" r="4" fill="#FAD1D1" fill-opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <div class="text-[13px] md:text-sm leading-relaxed text-gray-600">
+                            <p class="font-bold text-text-main mb-1">成美（Narumi）</p>
+                            <p class="text-[10px] text-gray-400 mb-3 uppercase tracking-tighter font-bold">Visiting Nurse / Mom of 2</p>
+                            <p>急性期病棟で6年勤務した後、出産を機に働き方を見直し。現在は2児の母として育児を優先しながら、訪問看護師として週4日勤務しています。同じように悩むみなさんの力になりたいと思い、実体験に基づいた「失敗しない働き方の選び方」を発信しています。</p>
+                            <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-[10px] text-soft-brown/70 font-bold uppercase tracking-wider">
+                                <span class="flex items-center gap-1 border-b border-soft-brown/20 pb-0.5">Mom Nurse / Lifestyle Blog</span>
+                                <span class="flex items-center gap-1 border-b border-soft-brown/20 pb-0.5">Contact: Instagram DM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-2xl mx-auto pb-20 text-center px-4">
+        <p class="text-[9px] tracking-[0.4em] text-gray-300 font-bold mb-8 uppercase">
+            &copy; 2026 Narumi's Nurse Log.
+        </p>
+
+        <!-- 信頼性ステートメント -->
+        <div class="bg-white/50 backdrop-blur-sm rounded-2xl p-6 text-[10px] text-left leading-relaxed text-gray-400 border border-white shadow-sm">
+            <p class="font-bold text-center text-gray-500 mb-3 uppercase tracking-widest">Compliance & Ethics</p>
+            <p class="mb-2">
+                当サイト「成美のナース日記。」は、現役で働く成美が個人で運営するライフスタイルブログです。自身の経験に基づき、現場の視点から誠実な情報発信を心がけております。
+            </p>
+            <p>
+                掲載している転職支援サービスは、すべて厚生労働大臣の認可を得た正規の紹介事業者です。本ページは適切な広告表記（PR）のもと運営されています。利用者様の個人情報を当サイトが直接収集・保存することはありません。最新の情報はリンク先の各公式サイトにてご確認ください。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
