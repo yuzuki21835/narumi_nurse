@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>育児しながら看護師を続けるコツ｜成美のナース日記。</title>
-    <meta name="description" content="訪問看護師として2児を育てながら働く成美が、育児と仕事を両立するためのリアルなコツを紹介します。">
+    <title>成美のナース日記。｜看護師の新しい働き方を考える</title>
+    <meta name="description" content="現役ママナース成美が、仕事と育児の両立を目指して新しい働き方を模索する個人ブログ。実体験に基づく転職サイト活用術を紹介。">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Yomogi&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -15,12 +18,15 @@
             theme: {
                 extend: {
                     colors: {
-                        'natural-bg': '#FAF7F2',
-                        'natural-accent': '#E8D3C1',
-                        'warm-pink': '#F9E8E8',
+                        'natural-bg': '#FAF7F2', 
+                        'natural-accent': '#E8D3C1', 
+                        'warm-pink': '#F9E8E8', 
                         'leaf-green': '#DDE4D7',
                         'soft-brown': '#8C7B6C',
                         'text-main': '#5D544D',
+                        'repath-red': '#FF6B6B',
+                        'levwell-blue': '#4DABF7',
+                        'hatarako-green': '#20C997'
                     },
                     fontFamily: {
                         'hand': ['Yomogi', 'cursive'],
@@ -39,14 +45,30 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
+        
         .marker-soft {
             background: linear-gradient(transparent 65%, #F3E5D8 65%);
         }
+
         .content-card {
             background: white;
             border-radius: 40px;
             box-shadow: 0 20px 50px rgba(93, 84, 77, 0.05);
         }
+
+        .btn-link {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-link:hover {
+            transform: scale(1.02);
+            opacity: 0.95;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -56,10 +78,12 @@
             opacity: 1;
             transform: translateY(0);
         }
+
         .profile-border {
             border: 6px solid #fff;
             box-shadow: 0 8px 30px rgba(232, 211, 193, 0.5);
         }
+
         .floating {
             animation: float 4s ease-in-out infinite;
         }
@@ -67,11 +91,10 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-        a { cursor: pointer; text-decoration: none; }
-        .tip-card {
-            background: #FAF7F2;
-            border-radius: 24px;
-            border-left: 4px solid #E8D3C1;
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -85,107 +108,129 @@
 
     <!-- Header -->
     <header class="max-w-2xl mx-auto mb-10 text-center reveal">
-        <a href="./index.html">
-            <h1 class="font-hand text-3xl md:text-4xl text-soft-brown mb-1 tracking-tighter">Narumi's Nurse Log.</h1>
-            <p class="text-[9px] tracking-[0.4em] uppercase text-natural-accent font-bold">Nursing & Motherhood lifestyle</p>
-        </a>
+        <h1 class="font-hand text-3xl md:text-4xl text-soft-brown mb-1 tracking-tighter">Narumi's Nurse Log.</h1>
+        <p class="text-[9px] tracking-[0.4em] uppercase text-natural-accent font-bold">Nursing & Motherhood lifestyle</p>
     </header>
 
     <!-- Main Container -->
     <main class="max-w-2xl mx-auto content-card overflow-hidden mb-12 border border-white">
-
-        <!-- Hero -->
-        <div class="p-3 md:p-6">
-            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200" alt="育児と仕事を両立する看護師" class="w-full h-64 md:h-80 object-cover rounded-[30px] md:rounded-[35px]">
+        
+        <!-- Hero Section -->
+        <div class="relative">
+            <div class="p-3 md:p-6">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=1200" alt="公園で遊ぶ親子の風景" class="w-full h-64 md:h-96 object-cover rounded-[30px] md:rounded-[35px]">
+            </div>
         </div>
 
-        <!-- Article -->
+        <!-- Article Content Area -->
         <div class="px-6 md:px-16 pt-8 pb-16">
-
-            <!-- カテゴリ -->
-            <div class="flex justify-center mb-6">
-                <span class="text-[10px] tracking-widest uppercase font-bold text-soft-brown/60 bg-natural-bg px-4 py-1 rounded-full">Column</span>
-            </div>
-
-            <h2 class="text-2xl md:text-3xl font-serif font-bold text-center leading-[1.8] mb-4 text-text-main">
-                育児しながら<br>
-                <span class="marker-soft">看護師を続けるコツ</span>
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-center leading-[1.8] mb-12 text-text-main">
+                看護師向け転職サービスの比較<br>
+                <span class="marker-soft text-xl md:text-2xl">後悔しない職場選びの第一歩</span>
             </h2>
 
-            <p class="text-center text-xs text-gray-400 mb-12">2026.04.10 ｜ 成美</p>
-
             <div class="space-y-10 text-[15px] md:text-[16px] leading-[2.2] text-text-main/90 font-serif">
-
                 <div class="reveal">
-                    <p>
-                        急性期病棟で働いていた頃、「子どもができたら仕事を辞めるしかないかも」と思っていました。夜勤、残業、急変対応――育児との両立なんて想像できなかった。
+                    <p class="mb-4">
+                        看護師の転職では、複数のサービスを比較しながら進めることが一般的です。<br>
+                        それぞれ特徴が異なるため、自分に合ったサービスを選ぶことが大切です。
                     </p>
-                    <p class="mt-4">
-                        でも今は、2人の子どもを育てながら訪問看護師として働いています。完璧じゃないけど、なんとかなってる。今日はそのリアルをシェアしたいと思います。
+                    <p class="text-sm text-gray-500">
+                        ※本サイトでは看護師向け転職サービスの情報をまとめています。
                     </p>
                 </div>
 
-                <!-- コツ1 -->
-                <div class="reveal tip-card p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-8 h-8 rounded-full bg-natural-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0">01</span>
-                        <h3 class="font-bold text-lg font-sans text-text-main">「夜勤なし」の職場を選ぶ</h3>
+                <div class="reveal flex items-center gap-2 py-4 border-y border-natural-accent/20">
+                    <i data-lucide="layout-list" class="text-soft-brown w-5 h-5"></i>
+                    <span class="font-bold text-lg font-sans">主な転職サービス</span>
+                </div>
+
+                <!-- Comparison Cards -->
+                <div class="pt-4 space-y-16 font-sans">
+                    
+                    <!-- 1. Leverwell -->
+                    <div class="reveal">
+                        <h3 class="font-bold text-lg mb-2 text-text-main">
+                            レバウェル看護
+                        </h3>
+                        <div class="text-sm text-gray-600 leading-relaxed mb-6 space-y-2">
+                            <p>
+                                求人数が多く、幅広い選択肢の中から求人を探せるサービスです。
+                            </p>
+                            <p>
+                                全国対応しており、初めて転職する方にも利用されています。履歴書添削や面接対策などのサポートも提供されています。
+                            </p>
+                        </div>
+                        <a href="https://kango-oshigoto.jp/" target="_blank" rel="noopener noreferrer" class="btn-link w-full md:w-auto px-10 py-4 rounded-xl bg-levwell-blue text-white font-bold text-sm shadow-lg shadow-blue-100">
+                            公式サイトはこちら
+                        </a>
                     </div>
-                    <p class="text-sm leading-relaxed text-gray-600">
-                        これが一番大きかった。訪問看護は基本的に日勤のみ。子どもが熱を出しても、夜は家にいられる安心感は思っていた以上に大きかった。病棟勤務にこだわらなくていい、と気づいてから選択肢が一気に広がりました。
-                    </p>
-                </div>
 
-                <!-- コツ2 -->
-                <div class="reveal tip-card p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-8 h-8 rounded-full bg-natural-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0">02</span>
-                        <h3 class="font-bold text-lg font-sans text-text-main">「時短OK」を条件に入れて探す</h3>
+                    <!-- 2. Repath -->
+                    <div class="reveal">
+                        <h3 class="font-bold text-lg mb-2 text-text-main">
+                            リーパスナース
+                        </h3>
+                        <div class="text-sm text-gray-600 leading-relaxed mb-6 space-y-2">
+                            <p>
+                                看護師に寄り添ったサポートが特徴のサービスです。
+                            </p>
+                            <p>
+                                在宅・訪問看護領域の求人にも対応しており、LINEでのやり取りなど柔軟なサポートが受けられます。
+                            </p>
+                        </div>
+                        <a href="https://lp.commitad.com/repath-nurse/01/?_rt_ck=10190.260419350716" target="_blank" rel="noopener noreferrer" class="btn-link w-full md:w-auto px-10 py-4 rounded-xl bg-repath-red text-white font-bold text-sm shadow-lg shadow-red-100">
+                            公式サイトはこちら
+                        </a>
                     </div>
-                    <p class="text-sm leading-relaxed text-gray-600">
-                        求人を探すとき、最初から「時短勤務可」を必須条件にしていました。転職サービスを使うと、この条件で絞り込みやすくて助かりました。担当者に口頭で「保育園のお迎えがあるので17時退勤必須」と伝えると、非公開求人の中から合う案件を出してくれることも。
-                    </p>
-                </div>
 
-                <!-- コツ3 -->
-                <div class="reveal tip-card p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-8 h-8 rounded-full bg-natural-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0">03</span>
-                        <h3 class="font-bold text-lg font-sans text-text-main">「完璧な母」をやめた</h3>
+                    <!-- 3. Hatarako -->
+                    <div class="reveal">
+                        <h3 class="font-bold text-lg mb-2 text-text-main">
+                            ナースではたらこ
+                        </h3>
+                        <div class="text-sm text-gray-600 leading-relaxed mb-6 space-y-2">
+                            <p>
+                                非公開求人の紹介や、医療機関への応募相談が可能なサービスです。
+                            </p>
+                            <p>
+                                全国の医療機関情報をもとに、転職活動をサポートしています。
+                            </p>
+                        </div>
+                        <a href="https://www.hatarako.net/agent/nurse/index.html" target="_blank" rel="noopener noreferrer" class="btn-link w-full md:w-auto px-10 py-4 rounded-xl bg-hatarako-green text-white font-bold text-sm shadow-lg shadow-emerald-100">
+                            詳細はこちら
+                        </a>
                     </div>
-                    <p class="text-sm leading-relaxed text-gray-600">
-                        ご飯はスーパーのお惣菜でいい。お弁当はおにぎりだけの日があってもいい。そう決めてから、気持ちがすごくラクになりました。仕事も育児も「100点」を目指すと絶対に続かない。どちらも「70点くらいで上出来」くらいの気持ちでいると、不思議と長続きします。
+                </div>
+
+                <div class="reveal mt-12 bg-natural-bg/50 p-6 rounded-2xl border border-natural-accent/20">
+                    <h3 class="font-bold text-text-main mb-3 flex items-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        まとめ
+                    </h3>
+                    <p class="text-sm leading-relaxed">
+                        転職活動では複数のサービスを比較しながら進めることで、より自分に合った職場を見つけやすくなります。
                     </p>
                 </div>
 
-                <!-- コツ4 -->
-                <div class="reveal tip-card p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-8 h-8 rounded-full bg-natural-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0">04</span>
-                        <h3 class="font-bold text-lg font-sans text-text-main">転職のタイミングは「早め」がいい</h3>
-                    </div>
-                    <p class="text-sm leading-relaxed text-gray-600">
-                        追い詰められてから動くと、条件を妥協しがち。「まだ頑張れるかな」という段階で転職活動を始めると、余裕を持って職場を選べます。複数のサービスに登録して比較するのが、後悔しない転職への近道だと思っています。
-                    </p>
+                <!-- ★ コラムリンク追加 -->
+                <div class="reveal mt-6">
+                    <a href="./column1.html" class="block bg-warm-pink rounded-2xl p-6 border border-natural-accent/20 hover:shadow-md transition-shadow">
+                        <p class="text-[10px] tracking-widest uppercase font-bold text-soft-brown/60 mb-2">Column</p>
+                        <p class="font-bold text-text-main font-sans mb-1">育児しながら看護師を続けるコツ</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">訪問看護に転職して変わったこと、育児との両立のリアルをまとめました。</p>
+                        <p class="text-xs text-soft-brown mt-3">続きを読む →</p>
+                    </a>
                 </div>
 
-                <div class="reveal">
-                    <p>
-                        育児中の看護師にとって、職場選びは本当に大事。合わない環境を我慢し続けるより、自分に合った働き方を探す勇気を持ってほしいと思います。
-                    </p>
-                    <p class="mt-4">
-                        私が転職活動で使ったサービスの比較は<a href="./index.html" class="text-soft-brown underline underline-offset-4">こちら</a>にまとめています。よかったら参考にしてみてください。
-                    </p>
-                </div>
-
-                <!-- プロフィール -->
+                <!-- 運営者プロフィール -->
                 <div class="reveal mt-16 p-8 rounded-[35px] bg-natural-bg/30 border border-white font-sans shadow-inner">
                     <h4 class="font-bold text-soft-brown text-center mb-6 flex items-center justify-center gap-2 text-xs tracking-widest uppercase">
                         Writer Profile
                     </h4>
                     <div class="flex flex-col md:flex-row items-center gap-6">
                         <div class="w-24 h-24 rounded-full profile-border overflow-hidden bg-white flex-shrink-0 flex items-center justify-center floating">
-                            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="30" cy="35" r="12" fill="#D2B48C"/>
                                 <circle cx="70" cy="35" r="12" fill="#D2B48C"/>
                                 <circle cx="50" cy="55" r="32" fill="#D2B48C"/>
@@ -213,11 +258,19 @@
         <p class="text-[9px] tracking-[0.4em] text-gray-300 font-bold mb-8 uppercase">
             &copy; 2026 Narumi's Nurse Log.
         </p>
+
+        <!-- 信頼性ステートメント -->
         <div class="bg-white/50 backdrop-blur-sm rounded-2xl p-6 text-[10px] text-left leading-relaxed text-gray-400 border border-white shadow-sm">
             <p class="font-bold text-center text-gray-500 mb-3 uppercase tracking-widest">Compliance & Ethics</p>
-            <p class="mb-2">当サイト「成美のナース日記。」は、看護師向け転職サービスの情報を紹介しています。</p>
-            <p class="mb-2">掲載している転職支援サービスは、すべて厚生労働大臣の認可を得た正規の紹介事業者です。本ページは適切な広告表記（PR）のもと運営されています。</p>
-            <p>利用者様の個人情報を当サイトが直接収集・保存することはありません。最新の情報はリンク先の各公式サイトにてご確認ください。</p>
+            <p class="mb-2">
+                当サイト「成美のナース日記。」は、看護師向け転職サービスの情報を紹介しています。
+            </p>
+            <p class="mb-2">
+                掲載している転職支援サービスは、すべて厚生労働大臣の認可を得た正規の紹介事業者です。本ページは適切な広告表記（PR）のもと運営されています。
+            </p>
+            <p>
+                利用者様の個人情報を当サイトが直接収集・保存することはありません。最新の情報はリンク先の各公式サイトにてご確認ください。
+            </p>
         </div>
     </footer>
 
@@ -225,7 +278,9 @@
         lucide.createIcons();
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
